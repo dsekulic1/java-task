@@ -1,0 +1,25 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: task
+  main:
+    allow-circular-references: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: ## populate from secret
+    username: ## populate from secret
+    password: ## populate from secret
+server:
+  port: 8081
+  error:
+    include-message: always
+    include-stacktrace: never
+app:
+  jwtSecret: BV:3pDW4Bg\>fBcE
+  jwtExpiration: 43200000
